@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script type="text/javascript">
-		function createOutput(){
-			var Output;
-          if(ducument.getElementById("run")){
-          	Output = "Excecuted";
-          }else if (document.getElementById("debug")) {
-          	Output = "Debug"
-          } else{
-          	Output = "Execution Stopped";
-          }
-          document.getElementById("output").innerHTML = Output;
-		}
-	</script>
+
+   <script src="compiler.js">
+   	
+   </script>
 	<title>Code Editor</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -36,26 +27,28 @@
 				<div class="card">
 			         <div class="card-body">
 			         	
-			         	<button class="btn btn-success" id="run" onclick="createOutput">Run</button>
-			         	<button class="btn btn-primary" id="debug" onclick="createOutput">Debug</button>
-			         	<button class="btn btn-danger" id="stop" onclick="createOutput">Stop</button><br><br>
-			         	<div class="row">
-			         		<div class="form-group">
-			         			<label for="Code">Write code here:-</label>
-			         			<textarea class="form-control" rows="20" cols="150" id="Code"></textarea>
-			         		</div>
-			         	</div>
-			         </div>		
-				</div>
+			         	<button class="btn btn-success" id="run" onclick="createOutput()">Run</button>
+			         	<button class="btn btn-primary" id="debug" onclick="createOutput()">Debug</button>
+			         	<button class="btn btn-danger" id="stop" onclick="createOutput()">Stop</button>
+			         	<br><br>
+			         <div class="form-group">
+			         	<label for="Code">Write code here:-</label>
+			         	<textarea class="form-control" rows="10" id="Code"></textarea>
+			         </div>
+				     </div>
+			      </div>		
 			</div>
 		</div>
-			<div class="rows">
-	   		    <div class="col-md-12">
-	   	           <h3 id="output">Output</h3>
-			    </div>
-	        </div>
+          <br><br>
+		<div class="rows">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-body">
+						<h3 id="input">Output</h3>
+					</div>
+				</div>
+			</div> 
+		</div>
 	</div>
-
-	
 </body>
 </html>
