@@ -4,7 +4,7 @@
                     output = "Executed";
                }else if(action == 'debug'){
                     output = "Debugged";
-               }else if(action == 'Stop'){
+               }else if(action == 'stop'){
                     output = "Stopped";
                }
 
