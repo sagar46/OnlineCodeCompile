@@ -1,12 +1,12 @@
-          function createOutput(){
+          function createOutput( action ){
                var output;
-               if(document.getElementById == "run"){
+               if(action == 'run'){
                     output = "Executed";
-               }else if(document.getElementById == "debug"){
+               }else if(action == 'debug'){
                     output = "Debugged";
-               }else if(document.getElementById == "stop"){
+               }else if(action == 'Stop'){
                     output = "Stopped";
                }
 
-               document.write(document.getElementById("input").innerHTML = output );
+               document.getElementById("input").innerHTML = output;
           }
